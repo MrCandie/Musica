@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section-1 {
+  @apply flex flex-col max-w-6xl mx-auto items-center justify-center mt-8 space-y-6 md:flex-row md:space-y-0 md:space-x-4;
+}
+.nav-body {
+  @apply flex flex-col space-y-8 bg-zinc-800 px-4 text-gray-400 py-12 rounded-full;
+}
+.nav-body-2 {
+  @apply flex flex-col space-y-8 bg-zinc-800 px-4 text-gray-400 py-12 rounded-full;
+}
+.likes-image {
+  @apply w-8 rounded-full absolute;
+}
+.music-body {
+  @apply relative flex flex-col md:flex-row space-x-4 md:space-y-0 items-center justify-start space-y-4 pr-20 bg-zinc-800 p-8 rounded-2xl md:p-2 hover:translate-x-0.5 duration-500;
+}
+.music-image {
+  @apply w-[120px] md:w-[100px] md:h-[100px] hover:scale-110 duration-500;
+}
+.h4 {
+  @apply text-sm text-white font-normal;
+}
+.music-info-body {
+  @apply flex flex-col space-y-2 md:pr-20;
+}
+.music-icon {
+  @apply absolute right-2 top-2 p-4 rounded-full bg-zinc-700 border border-zinc-500 w-4 h-4 flex items-center justify-center;
+}
+.h2 {
+  @apply text-white text-2xl font-bold capitalize;
+}
+.album-body {
+  @apply flex items-center space-x-6 md:max-w-6xl max-w-[55%];
+}
+.album-image {
+  @apply w-60 md:hover:scale-110 duration-500;
+}
+
+.body {
+  background-image: url("../image/Rectangle 26 (3).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* hamburger menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+.open {
+  transform: rotate(90deg);
+}
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hamburger-middle {
+  display: none;
+}
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+.hide {
+  display: none;
+}

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ea3bde8322.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+    <title>MUSICA</title>
+  </head>
+  <body>
+    <!-- global container -->
+    <div class="w-full min-h-screen bg-zinc-700 p-8 overflow-hidden">
+      <!-- search input and logo -->
+      <div
+        class="relative flex items-center justify-between space-x-10 max-w-6xl mx-auto"
+      >
+        <div><img src="image/Logo.png" alt="" /></div>
+        <div>
+          <i
+            class="fa-solid fa-magnifying-glass md:absolute hidden md:left-20 md:mt-2 md:text-lg md:text-gray-500 md:block"
+          ></i>
+          <input
+            type="text"
+            placeholder="Search"
+            class="hidden md:bg-zinc-700 md:text-gray-500 md:placeholder:text-start md:placeholder:text-gray-400 md:focus:outline-none md:py-2 md:px-20 md:rounded-xl md:block"
+          />
+        </div>
+
+        <!-- hamburger menu -->
+        <div class="md:hidden">
+          <button
+            id="menu-btn"
+            type="button"
+            class="z-[70] block hamburger md:hidden focus:outline-none"
+          >
+            <span class="hamburger-top"></span>
+            <!-- <span class="hamburger-middle"></span> -->
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+      </div>
+      <!--  mobile  menu -->
+      <div
+        id="menu"
+        class="absolute top-0 bottom-0 right-0 flex-col hidden self-end w-[75%] min-h-screen py-1 pt-40 pl-12 space-y-10 text-lg text-gray-400 uppercase bg-zinc-800 z-[50] shadow-lg shadow-gray-500"
+      >
+        <a href="#" class="flex w-full duration-500 hover:translate-x-0.5"
+          ><div class="flex items-center justify-center space-x-6">
+            <i class="fa-solid fa-house text-yellow-400"></i>
+            <h3 class="text-white font-bold">Home</h3>
+          </div></a
+        >
+        <a href="#" class="flex w-full duration-500 hover:translate-x-0.5"
+          ><div class="flex items-center justify-center space-x-6">
+            <i class="fa-solid fa-music"></i>
+            <h3>My Collections</h3>
+          </div></a
+        >
+        <a
+          href="album.html"
+          class="flex w-full duration-500 hover:translate-x-0.5"
+        >
+          <div class="flex items-center justify-center space-x-6">
+            <i class="fa-solid fa-radio"></i>
+            <h3>Radio</h3>
+          </div></a
+        >
+        <a href="#" class="flex w-full duration-500 hover:translate-x-0.5">
+          <div class="flex items-center justify-center space-x-6">
+            <i class="fa-solid fa-clapperboard"></i>
+            <h3>Music Videos</h3>
+          </div></a
+        >
+        <a href="#" class="flex w-full duration-500 hover:translate-x-0.5"
+          ><div class="flex items-center justify-center space-x-6">
+            <i class="fa-solid fa-user"></i>
+            <h3>Profile</h3>
+          </div></a
+        >
+        <a href="#" class="flex w-full duration-500 hover:translate-x-0.5">
+          <div class="flex items-center justify-center space-x-6">
+            <i class="fa-solid fa-up-right-from-square"></i>
+            <h3>Logout</h3>
+          </div>
+        </a>
+      </div>
+      <!-- section-1 -->
+      <section id="section-1">
+        <!-- home container -->
+        <div class="section-1">
+          <nav class="hidden md:flex flex-col max-w-3xl space-y-10">
+            <div class="nav-body">
+              <a href="#"
+                ><i
+                  class="fa-solid fa-house text-yellow-400 hover:-translate-y-1 duration-500"
+                ></i
+              ></a>
+              <a href="album.html">
+                <i
+                  class="fa-solid fa-music hover:-translate-y-1 duration-500"
+                ></i
+              ></a>
+              <a href="#"
+                ><i
+                  class="fa-solid fa-radio hover:-translate-y-1 duration-500"
+                ></i
+              ></a>
+              <a href="collection.html">
+                <i
+                  class="fa-solid fa-clapperboard hover:-translate-y-1 duration-500"
+                ></i
+              ></a>
+            </div>
+            <div class="nav-body-2">
+              <a href="#">
+                <i
+                  class="fa-solid fa-user hover:-translate-y-1 duration-500"
+                ></i
+              ></a>
+              <a href="#">
+                <i
+                  class="fa-solid fa-up-right-from-square hover:-translate-y-1 duration-500"
+                ></i
+              ></a>
+            </div>
+          </nav>
+          <!-- home content container -->
+          <div
+            class="flex flex-col items-center justify-center space-y-6 md:flex-row md:space-y-0 md:space-x-6"
+          >
+            <div
+              class="relative flex flex-col md:flex-row bg-[#609EAF] px-5 md:px-10 md:py-20 py-10 rounded-3xl space-x-10"
+            >
+              <div>
+                <h4
+                  class="text-white text-start text-sm mb-20 md:mb-6 md:pb-20 pb-0"
+                >
+                  Curated playlist
+                </h4>
+                <div class="flex flex-col text-white space-y-6 max-w-[80%]">
+                  <h2 class="text-3xl capitalize font-bold">r & b hits</h2>
+                  <p class="text-xs capitalize max-w-xs">
+                    all mine, lie again, petty call me everyday, out of time, no
+                    love bad habit, and so much more
+                  </p>
+                </div>
+                <!-- likes -->
+                <div class="relative flex flex-row max-w-2xl mt-8 mb-8">
+                  <div
+                    class="relative ml-8 px-0 w-1/2 flex items-center justify-center"
+                  >
+                    <!-- image-1 -->
+                    <img
+                      src="image/Rectangle 14 (5).png"
+                      class="likes-image -left-10 z-0"
+                    />
+                    <!-- image-2 -->
+                    <img
+                      src="image/Rectangle 14 (5).png"
+                      class="likes-image -left-5 z-10"
+                    />
+                    <!-- image-3 -->
+                    <img
+                      src="image/Rectangle 14 (5).png"
+                      class="likes-image left-0 z-20"
+                    />
+                    <!-- image-4 -->
+                    <img
+                      src="image/Rectangle 14 (5).png"
+                      class="likes-image left-5 z-30"
+                    />
+                    <!-- image-5 -->
+                    <img
+                      src="image/Rectangle 14 (5).png"
+                      class="likes-image left-10 z-40"
+                    />
+                  </div>
+                  <div class="capitalize flex flex-row space-x-2 -ml-16">
+                    <i class="fa-solid fa-heart text-xl text-white"></i>
+                    <p class="flex justify-between text-lg text-white">
+                      33k <span class="ml-2">likes</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- image -->
+              <div class="hidden md:block">
+                <img
+                  src="image/Rectangle 26.png"
+                  class="w-80 hover:scale-110 duration-500 rounded-2xl"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- top chart container -->
+          <div>
+            <div
+              class="flex flex-col space-y-4 rounded-2xl p-4 bg-zinc-700 w-full"
+            >
+              <h2 class="text-white text-2xl font-bold capitalize text-left">
+                top charts
+              </h2>
+              <div
+                class="flex flex-col items-center space-y-4 py-4 md:py-0 px-10"
+              >
+                <!-- music 1 -->
+                <div class="music-body">
+                  <!-- image -->
+                  <div>
+                    <img
+                      src="image/Rectangle 26 (3).png"
+                      class="music-image"
+                      alt=""
+                    />
+                  </div>
+                  <!-- music info -->
+                  <div class="music-info-body">
+                    <h4 class="h4">Golden age in 80s</h4>
+                    <h6 class="text-sm text-gray-400">Sean swadden</h6>
+                    <p class="text-white font-normal mt-4">2:34:45</p>
+                  </div>
+                  <!-- icon -->
+                  <div class="music-icon">
+                    <i
+                      class="fa-regular fa-heart text-yellow-100 font-light"
+                    ></i>
+                  </div>
+                </div>
+                <!-- music 2 -->
+                <div class="music-body">
+                  <!-- image -->
+                  <div>
+                    <img
+                      src="image/Rectangle 26 (3).png"
+                      class="music-image"
+                      alt=""
+                    />
+                  </div>
+                  <!-- music info -->
+                  <div class="music-info-body">
+                    <h4 class="h4">Reggae "n" blues</h4>
+                    <h6 class="text-sm text-gray-400">Dj YK mule</h6>
+                    <p class="text-white font-normal mt-4">1:01:25</p>
+                  </div>
+                  <!-- icon -->
+                  <div class="music-icon">
+                    <i
+                      class="fa-regular fa-heart text-yellow-100 font-light"
+                    ></i>
+                  </div>
+                </div>
+                <!-- music 3 -->
+                <div class="music-body">
+                  <!-- image -->
+                  <div>
+                    <img
+                      src="image/Rectangle 26 (3).png"
+                      class="music-image"
+                      alt=""
+                    />
+                  </div>
+                  <!-- music info -->
+                  <div class="music-info-body">
+                    <h4 class="h4">Tomorrow's tunes</h4>
+                    <h6 class="text-sm text-gray-400">Obi Datti</h6>
+                    <p class="text-white font-normal mt-4">2:01:25</p>
+                  </div>
+                  <!-- icon -->
+                  <div class="music-icon">
+                    <i
+                      class="fa-regular fa-heart text-yellow-100 font-light"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-2">
+        <div class="flex flex-col items-center space-y-8">
+          <!-- new release container -->
+          <div class="relative flex flex-col space-y-10">
+            <div class="mt-14 text-left">
+              <h2 class="h2">new release</h2>
+            </div>
+            <div class="album-body">
+              <!-- img-1 -->
+              <img
+                src="image/Rectangle 14 (1).png"
+                class="album-image"
+                alt=""
+              />
+              <!-- img-2 -->
+              <img
+                src="image/Rectangle 14 (2).png"
+                class="album-image"
+                alt=""
+              />
+              <!-- img-3 -->
+              <img
+                src="image/Rectangle 14 (3).png"
+                class="album-image"
+                alt=""
+              />
+              <!-- img-4 -->
+              <img
+                src="image/Rectangle 14 (4).png"
+                class="album-image"
+                alt=""
+              />
+              <!-- img-5 -->
+              <img
+                src="image/Rectangle 14 (5).png"
+                class="album-image"
+                alt=""
+              />
+              <!-- img-6 -->
+              <img src="image/Rectangle 14.png" class="album-image" alt="" />
+            </div>
+            <!-- top 10 songs -->
+            <div class="mt-14 text-left">
+              <h2 class="h2">Top 10 Songs</h2>
+            </div>
+            <div class="album-body">
+              <!-- img-1 -->
+              <img
+                src="image/Rectangle 14 (1).png"
+                class="album-image"
+                alt=""
+              />
+              <!-- img-2 -->
+              <img
+                src="image/Rectangle 14 (2).png"
+                class="album-image"
+                alt=""
+              />
+              <!-- img-3 -->
+              <img
+                src="image/Rectangle 14 (3).png"
+                class="album-image"
+                alt=""
+              />
+              <!-- img-4 -->
+              <img
+                src="image/Rectangle 14 (4).png"
+                class="album-image"
+                alt=""
+              />
+              <!-- img-5 -->
+              <img
+                src="image/Rectangle 14 (5).png"
+                class="album-image"
+                alt=""
+              />
+              <!-- img-6 -->
+              <img src="image/Rectangle 14.png" class="album-image" alt="" />
+            </div>
+            <!-- left play display -->
+            <div
+              class="flex flex-row fixed bottom-0 left-0 right-0 bg-zinc-800 p-2 bg-opacity-80 blue-2xl space-x-6 md:space-x-10"
+            >
+              <div
+                class="flex flex-row items-center w-full md:w-[80%] justify-center mx-auto space-x-10 md:space-x-20 p-4"
+              >
+                <!-- part 1 -->
+                <div class="flex flex-row items-center space-x-4">
+                  <div>
+                    <img
+                      src="image/Rectangle 26.png"
+                      class="hidden md:block w-[50px] rounded-xl"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex flex-col space-y-2 md:space-y-0">
+                    <h2
+                      class="text-xs md:text-sm text-white text-center md:text-left"
+                    >
+                      Seasons
+                    </h2>
+                    <p class="text-xs text-gray-400 text-center md:text-left">
+                      James
+                    </p>
+                  </div>
+                </div>
+
+                <!-- play buttons -->
+                <div class="flex flex-col space-y-6">
+                  <div
+                    class="flex flex-row items-center space-x-4 md:space-x-8 text-white mx-auto md:text-lg text-xs"
+                  >
+                    <button><i class="fa-solid fa-shuffle"></i></button>
+                    <button><i class="fa-solid fa-backward-step"></i></button>
+                    <button
+                      class="flex items-center justify-center bg-yellow-500 p-1 w-8 h-8 rounded-full hover:opacity-80 hover:shadow-lg duration-500 hover:scale-105"
+                    >
+                      <i class="fa-solid fa-play"></i>
+                    </button>
+                    <button><i class="fa-solid fa-forward-step"></i></button>
+                    <button><i class="fa-solid fa-repeat"></i></button>
+                  </div>
+                  <!-- progress bar -->
+                  <div
+                    class="w-full md:w-[750px] mx-auto h-2 rounded-full bg-transparent border border-gray-400"
+                  >
+                    <div
+                      class="relative w-[30%] h-2 rounded-full bg-yellow-500"
+                    >
+                      <div
+                        class="w-2 h-2 p-2 bg-yellow-500 shadow-lg absolute right-0 bottom-0 -my-1 rounded-full"
+                      >
+                        <div
+                          class="w-2 h-2 p-4 bg-transparent border shadow-lg absolute -right-2 -bottom-1 -my-1 rounded-full"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- speaker -->
+                <div
+                  class="flex items-center justify-center flex-row space-x-2 mt-10"
+                >
+                  <div class="flex item-center justify-center">
+                    <i class="fa-solid fa-volume-high text-white"></i>
+                  </div>
+                  <div>
+                    <div
+                      class="w-[30px] md:w-[150px] mx-auto rounded-full h-2 bg-transparent border border-gray-400"
+                    >
+                      <div
+                        class="relative w-[80%] h-2 rounded-full bg-yellow-500"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
